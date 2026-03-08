@@ -43,7 +43,7 @@ export const unitsGrade3 = [
     {
         id: 2,
         title: "정보 통신 기술 문제 해결",
-        videoId: "QSIPNhOiMoE", // What is the Internet of Things? (IBM/TED-Ed, 3:39)
+        videoId: "AEaKrq3SpW8", // The Internet: Crash Course Computer Science #29 (CrashCourse, ~12분)
         description: "정보가 어떻게 전달되는지 통신 시스템의 원리를 이해하고 직접 설계해 봅시다.",
         learningGoals: [
             "정보 통신 시스템의 구성 요소(송신, 전송 매체, 수신 등)를 이해한다.",
