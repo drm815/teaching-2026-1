@@ -78,7 +78,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                         </a>
                                     </div>
                                 </div>
-                                <p className="text-slate-400 text-4xl text-center italic">
+                                <p className="text-slate-400 text-xl text-center italic">
                                     본문 학습 전 영상을 시청하며 주제를 환기해보세요. (마우스 오버 시 새 창 보기 가능)
                                 </p>
                             </div>
@@ -95,7 +95,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: i * 0.1 }}
-                                            className="flex items-start gap-3 text-4xl text-slate-200"
+                                            className="flex items-start gap-3 text-xl text-slate-200"
                                         >
                                             <CheckCircle2 className="text-tech-accent shrink-0 mt-1" size={20} />
                                             {goal}
@@ -112,7 +112,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                     <h3 className="text-xl font-bold text-tech-primary">
                                         {unit.content[currentPage - 2].subtitle}
                                     </h3>
-                                    <p className="text-4xl text-slate-300 leading-relaxed whitespace-pre-wrap">
+                                    <p className="text-xl text-slate-300 leading-relaxed whitespace-pre-wrap">
                                         {unit.content[currentPage - 2].text}
                                     </p>
                                 </div>
@@ -141,12 +141,12 @@ const UnitViewer = ({ unit, onComplete }) => {
                                 <h3 className="text-2xl font-bold text-white leading-tight">
                                     {unit.activity.title}
                                 </h3>
-                                <p className="text-slate-400 text-2xl">{unit.activity.description}</p>
+                                <p className="text-slate-400 text-xl">{unit.activity.description}</p>
                                 <div className="space-y-3 mt-4">
                                     {unit.activity.steps.map((step, i) => (
                                         <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
                                             <span className="flex items-center justify-center w-6 h-6 rounded-full bg-tech-primary/20 text-tech-primary text-xs font-bold shrink-0">{i + 1}</span>
-                                            <p className="text-slate-300 text-2xl">{step}</p>
+                                            <p className="text-slate-300 text-xl">{step}</p>
                                         </div>
                                     ))}
                                 </div>
