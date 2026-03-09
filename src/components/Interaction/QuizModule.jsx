@@ -52,7 +52,7 @@ const QuizModule = ({ quizData, onFinish }) => {
                     <Award size={48} />
                 </div>
                 <h3 className="text-3xl font-bold text-white">퀴즈 완료!</h3>
-                <p className="text-xl text-slate-400">
+                <p className="text-2xl text-slate-400">
                     모든 퀴즈를 마쳤습니다. <br />
                     점수: <span className="text-tech-primary font-bold">{score} / {quizData.length}</span>
                 </p>
@@ -70,10 +70,10 @@ const QuizModule = ({ quizData, onFinish }) => {
         <div className="max-w-2xl mx-auto space-y-8">
             <div className="flex items-center gap-3">
                 <HelpCircle className="text-tech-primary" size={24} />
-                <span className="text-slate-500 font-mono text-sm">Question {currentIndex + 1} of {quizData.length}</span>
+                <span className="text-slate-500 font-mono text-lg">Question {currentIndex + 1} of {quizData.length}</span>
             </div>
 
-            <h3 className="text-2xl font-bold text-white leading-relaxed">
+            <h3 className="text-4xl font-bold text-white leading-relaxed">
                 {currentQuiz.question}
             </h3>
 
@@ -84,7 +84,7 @@ const QuizModule = ({ quizData, onFinish }) => {
                             key={i}
                             onClick={() => handleAnswer(i)}
                             disabled={showResult}
-                            className={`p-5 rounded-2xl text-left border transition-all duration-300 ${showResult
+                            className={`p-5 rounded-2xl text-left text-xl border transition-all duration-300 ${showResult
                                     ? i === currentQuiz.answer
                                         ? 'border-tech-accent bg-tech-accent/10 text-tech-accent'
                                         : i === selectedOption
@@ -125,7 +125,7 @@ const QuizModule = ({ quizData, onFinish }) => {
                         <input
                             type="text"
                             placeholder="정답을 입력하세요"
-                            className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 text-white focus:border-tech-primary focus:outline-none"
+                            className="w-full p-5 rounded-2xl bg-white/5 border border-white/10 text-white text-xl focus:border-tech-primary focus:outline-none"
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') handleAnswer(e.target.value);
                             }}
@@ -145,10 +145,10 @@ const QuizModule = ({ quizData, onFinish }) => {
                         animate={{ opacity: 1, y: 0 }}
                         className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3"
                     >
-                        <div className={`font-bold ${feedback.includes('정답') ? 'text-tech-accent' : 'text-red-400'}`}>
+                        <div className={`text-xl font-bold ${feedback.includes('정답') ? 'text-tech-accent' : 'text-red-400'}`}>
                             {feedback}
                         </div>
-                        <p className="text-slate-400 text-sm leading-relaxed">
+                        <p className="text-slate-400 text-xl leading-relaxed">
                             {currentQuiz.explanation}
                         </p>
                         <button

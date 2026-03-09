@@ -14,7 +14,7 @@ const UnitViewer = ({ unit, onComplete }) => {
             {/* Header */}
             <div className="mb-8 flex items-center justify-between">
                 <div>
-                    <span className="text-tech-primary font-mono text-xs tracking-widest uppercase">Unit {unit.id}</span>
+                    <span className="text-tech-primary font-mono text-base tracking-widest uppercase">Unit {unit.id}</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">{unit.title}</h2>
                 </div>
                 <div className="text-right">
@@ -43,12 +43,12 @@ const UnitViewer = ({ unit, onComplete }) => {
                         {currentPage === 0 && (
                             <div className="space-y-6 h-full flex flex-col">
                                 <div className="flex items-center justify-between">
-                                    <div className="inline-block px-3 py-1 bg-tech-primary/10 border border-tech-primary/20 rounded-full text-tech-primary text-xs font-bold uppercase tracking-wider">학습 도입 영상</div>
+                                    <div className="inline-block px-3 py-1 bg-tech-primary/10 border border-tech-primary/20 rounded-full text-tech-primary text-base font-bold uppercase tracking-wider">학습 도입 영상</div>
                                     <a
                                         href={`https://www.youtube.com/watch?v=${unit.videoId}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-xs text-slate-400 hover:text-tech-primary flex items-center gap-1 transition-colors"
+                                        className="text-sm text-slate-400 hover:text-tech-primary flex items-center gap-1 transition-colors"
                                     >
                                         <RotateCcw size={12} className="rotate-45" />
                                         유튜브에서 직접 보기
@@ -78,7 +78,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                         </a>
                                     </div>
                                 </div>
-                                <p className="text-slate-400 text-sm text-center italic">
+                                <p className="text-slate-400 text-lg text-center italic">
                                     본문 학습 전 영상을 시청하며 주제를 환기해보세요. (마우스 오버 시 새 창 보기 가능)
                                 </p>
                             </div>
@@ -87,7 +87,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                         {/* 1. Learning Goals Page */}
                         {currentPage === 1 && (
                             <div className="space-y-6">
-                                <div className="inline-block px-3 py-1 bg-tech-primary/10 border border-tech-primary/20 rounded-full text-tech-primary text-xs font-bold">학습 목표</div>
+                                <div className="inline-block px-3 py-1 bg-tech-primary/10 border border-tech-primary/20 rounded-full text-tech-primary text-base font-bold">학습 목표</div>
                                 <ul className="space-y-4">
                                     {unit.learningGoals.map((goal, i) => (
                                         <motion.li
@@ -95,7 +95,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: i * 0.1 }}
-                                            className="flex items-start gap-3 text-lg text-slate-200"
+                                            className="flex items-start gap-3 text-2xl text-slate-200"
                                         >
                                             <CheckCircle2 className="text-tech-accent shrink-0 mt-1" size={20} />
                                             {goal}
@@ -112,7 +112,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                     <h3 className="text-xl font-bold text-tech-primary">
                                         {unit.content[currentPage - 2].subtitle}
                                     </h3>
-                                    <p className="text-lg text-slate-300 leading-relaxed whitespace-pre-wrap">
+                                    <p className="text-2xl text-slate-300 leading-relaxed whitespace-pre-wrap">
                                         {unit.content[currentPage - 2].text}
                                     </p>
                                 </div>
@@ -137,16 +137,16 @@ const UnitViewer = ({ unit, onComplete }) => {
                         {/* 3. Activity Page (if exists) */}
                         {unit.activity && currentPage === unit.content.length + 2 && (
                             <div className="space-y-6">
-                                <div className="inline-block px-3 py-1 bg-tech-accent/10 border border-tech-accent/20 rounded-full text-tech-accent text-xs font-bold">활동</div>
+                                <div className="inline-block px-3 py-1 bg-tech-accent/10 border border-tech-accent/20 rounded-full text-tech-accent text-base font-bold">활동</div>
                                 <h3 className="text-2xl font-bold text-white leading-tight">
                                     {unit.activity.title}
                                 </h3>
-                                <p className="text-slate-400">{unit.activity.description}</p>
+                                <p className="text-slate-400 text-xl">{unit.activity.description}</p>
                                 <div className="space-y-3 mt-4">
                                     {unit.activity.steps.map((step, i) => (
                                         <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
                                             <span className="flex items-center justify-center w-6 h-6 rounded-full bg-tech-primary/20 text-tech-primary text-xs font-bold shrink-0">{i + 1}</span>
-                                            <p className="text-slate-300">{step}</p>
+                                            <p className="text-slate-300 text-xl">{step}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -160,7 +160,7 @@ const UnitViewer = ({ unit, onComplete }) => {
                                     <RotateCcw className="text-tech-primary animate-spin-slow" size={48} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">학습 내용을 확인해볼까요?</h3>
-                                <p className="text-slate-400">간단한 퀴즈를 통해 오늘 배운 내용을 복습합니다.</p>
+                                <p className="text-slate-400 text-xl">간단한 퀴즈를 통해 오늘 배운 내용을 복습합니다.</p>
                                 <button
                                     onClick={onComplete}
                                     className="mt-4 px-8 py-3 bg-tech-primary text-tech-bg font-bold rounded-xl hover:bg-tech-accent transition-colors"

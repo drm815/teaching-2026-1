@@ -35,12 +35,12 @@ const TOC = ({ onSelectUnit, units }) => {
                             <h3 className="text-xl font-bold text-white group-hover:text-tech-primary transition-colors">
                                 {unit.title}
                             </h3>
-                            <p className="mt-2 text-sm text-slate-400 line-clamp-2 leading-relaxed">
+                            <p className="mt-2 text-lg text-slate-400 line-clamp-2 leading-relaxed">
                                 {unit.description}
                             </p>
                         </div>
 
-                        <div className="mt-8 flex items-center text-xs font-semibold text-tech-accent uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                        <div className="mt-8 flex items-center text-base font-semibold text-tech-accent uppercase tracking-wider group-hover:translate-x-1 transition-transform">
                             학습 시작하기
                             <ChevronRight size={14} className="ml-1" />
                         </div>
