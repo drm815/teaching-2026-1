@@ -28,19 +28,19 @@ const TOC = ({ onSelectUnit, units }) => {
                             <div className="p-3 bg-tech-primary/10 rounded-xl group-hover:bg-tech-primary/20 transition-colors">
                                 <Icon className="text-tech-primary" size={24} />
                             </div>
-                            <span className="text-xs font-mono text-tech-primary/50">UNIT 0{unit.id}</span>
+                            <span className="text-base font-mono text-tech-primary/50">UNIT 0{unit.id}</span>
                         </div>
 
                         <div className="mt-6">
                             <h3 className="text-xl font-bold text-white group-hover:text-tech-primary transition-colors">
                                 {unit.title}
                             </h3>
-                            <p className="mt-2 text-lg text-slate-400 line-clamp-2 leading-relaxed">
+                            <p className="mt-2 text-3xl text-slate-400 line-clamp-2 leading-relaxed">
                                 {unit.description}
                             </p>
                         </div>
 
-                        <div className="mt-8 flex items-center text-base font-semibold text-tech-accent uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                        <div className="mt-8 flex items-center text-2xl font-semibold text-tech-accent uppercase tracking-wider group-hover:translate-x-1 transition-transform">
                             학습 시작하기
                             <ChevronRight size={14} className="ml-1" />
                         </div>
